@@ -11,13 +11,15 @@ app.get('/', (req, res)=>{
 app.get('/blog',(req,res)=>{
     // res.render(index.html);
     // res.set('Content-Type', 'text/css');
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/index.html'+'/readmore.html');
+	
 });
 app.get('/readmore',(req,res)=>{
     // res.render(index.html);
     // res.set('Content-Type', 'text/css');
     res.sendFile(__dirname + '/readmore.html');
 });
+
 
 app.listen(PORT, (error) =>{
 	if(!error)
